@@ -70,7 +70,7 @@ Setting of the duty is done by first calling dedicated function :cpp:func:`ledc_
 
 Another way to set the duty, and some other channel parameters as well, is by calling :cpp:func:`ledc_channel_config` discussed in the previous section.
 
-The range of the duty value entered into functions depends on selected ``duty_resolution`` and should be from 0 to (2 ** duty_resolution) - 1. For example, if selected duty resolution is 10, then the duty range is from 0 to 1023. This provides the resolution of ~0.1%.
+The range of the duty value entered into functions depends on selected ``duty_resolution`` and should be from 0 to (2 :sup:duty_resolution;) - 1. For example, if selected duty resolution is 10, then the duty range is from 0 to 1023. This provides the resolution of ~0.1%.
 
 
 Change PWM Duty with Hardware Fading
@@ -139,7 +139,7 @@ For additional details regarding speed modes please refer to `ESP32 Technical Re
 Supported Range of Frequency and Duty Resolution
 ------------------------------------------------
 
-The LED PWM Controller is designed primarily to drive LEDs and provides wide resolution of PWM duty settings. For instance for the PWM frequency at 5 kHz, the maximum duty resolution is 13 bits. It means that the duty may be set anywhere from 0 to 100% with resolution of ~0.012% (13 ** 2 = 8192 discrete levels of the LED intensity).
+The LED PWM Controller is designed primarily to drive LEDs and provides wide resolution of PWM duty settings. For instance for the PWM frequency at 5 kHz, the maximum duty resolution is 13 bits. It means that the duty may be set anywhere from 0 to 100% with resolution of ~0.012% (2 :sup:13; = 8192 discrete levels of the LED intensity).
 
 The LEDC may be used for providing signals at much higher frequencies to clock other devices, e.g. a digital camera module. In such a case the maximum available frequency is 40 MHz with duty resolution of 1 bit. This means that duty is fixed at 50% and cannot be adjusted.
 
